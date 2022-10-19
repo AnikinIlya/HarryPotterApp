@@ -17,6 +17,7 @@
 		090A72CC290014CA003BDD7F /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090A72CB290014CA003BDD7F /* InfoViewController.swift */; };
 		090A72CE290014E0003BDD7F /* CharactersCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090A72CD290014E0003BDD7F /* CharactersCollectionViewController.swift */; };
 		090A72D929001BEF003BDD7F /* harryp.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 090A72D829001BEF003BDD7F /* harryp.ttf */; };
+		090A72E12900774D003BDD7F /* CharacterViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090A72E02900774D003BDD7F /* CharacterViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		090A72CB290014CA003BDD7F /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		090A72CD290014E0003BDD7F /* CharactersCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCollectionViewController.swift; sourceTree = "<group>"; };
 		090A72D829001BEF003BDD7F /* harryp.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = harryp.ttf; sourceTree = "<group>"; };
+		090A72E02900774D003BDD7F /* CharacterViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				090A72C629001406003BDD7F /* ViewControllers */,
+				090A72DF290075E0003BDD7F /* Views */,
 				090A72C1290010B6003BDD7F /* Services */,
 				090A72BE29000B95003BDD7F /* Models */,
 				090A72CF2900158F003BDD7F /* Storyboards */,
@@ -125,6 +128,14 @@
 				090A72B329000B44003BDD7F /* Assets.xcassets */,
 			);
 			path = Resurces;
+			sourceTree = "<group>";
+		};
+		090A72DF290075E0003BDD7F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				090A72E02900774D003BDD7F /* CharacterViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				090A72CE290014E0003BDD7F /* CharactersCollectionViewController.swift in Sources */,
+				090A72E12900774D003BDD7F /* CharacterViewCell.swift in Sources */,
 				090A72C3290010D6003BDD7F /* NetworkManager.swift in Sources */,
 				090A72AB29000B3A003BDD7F /* AppDelegate.swift in Sources */,
 				090A72C029000BCC003BDD7F /* HPCharacter.swift in Sources */,

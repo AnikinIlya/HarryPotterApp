@@ -19,13 +19,13 @@ struct HPCharacter: Decodable {
     let alternate_names: [String]
     let species: String
     let gender: String
-    let house: House
-    let dateOfBirth: Date
+    let house: String
+    let dateOfBirth: String
     let wizard: Bool
     let ancestry: String
     let eyeColour: String
     let hairColour: String
-    let wand: Wand
+//    let wand: Wand
     let patronus: String
     let hogwartsStudent: Bool
     let hogwartsStaff: Bool
@@ -35,8 +35,8 @@ struct HPCharacter: Decodable {
     let image: String
 }
 
-struct Wand: Decodable {
-    let wood: String
-    let core: String
-    let length: Int
-}
+//struct Wand: Decodable {
+//    let wood: String?
+//    let core: String?
+//    let length: Int?
+//}

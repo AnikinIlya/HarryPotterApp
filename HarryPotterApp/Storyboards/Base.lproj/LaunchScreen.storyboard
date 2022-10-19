@@ -16,15 +16,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hp2" translatesAutoresizingMaskIntoConstraints="NO" id="BoB-cq-o4I">
-                                <rect key="frame" x="0.0" y="235.5" width="414" height="425"/>
+                                <rect key="frame" x="16" y="328.5" width="382" height="239"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.050980392159999999" green="0.070588235289999995" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="BoB-cq-o4I" secondAttribute="trailing" id="YSr-PS-48Z"/>
+                            <constraint firstAttribute="trailing" secondItem="BoB-cq-o4I" secondAttribute="trailing" constant="16" id="YSr-PS-48Z"/>
                             <constraint firstItem="BoB-cq-o4I" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="iFZ-m7-IQL"/>
-                            <constraint firstItem="BoB-cq-o4I" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="sPX-Xq-lH0"/>
+                            <constraint firstItem="BoB-cq-o4I" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="16" id="sPX-Xq-lH0"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -34,6 +34,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="hp2" width="840" height="425"/>
+        <image name="hp2" width="525" height="239"/>
     </resources>
 </document>
