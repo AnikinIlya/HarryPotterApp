@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		090A72AB29000B3A003BDD7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090A72AA29000B3A003BDD7F /* AppDelegate.swift */; };
 		090A72AD29000B3A003BDD7F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090A72AC29000B3A003BDD7F /* SceneDelegate.swift */; };
-		090A72AF29000B3A003BDD7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090A72AE29000B3A003BDD7F /* ViewController.swift */; };
 		090A72B229000B3A003BDD7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 090A72B029000B3A003BDD7F /* Main.storyboard */; };
 		090A72B429000B44003BDD7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 090A72B329000B44003BDD7F /* Assets.xcassets */; };
 		090A72B729000B44003BDD7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 090A72B529000B44003BDD7F /* LaunchScreen.storyboard */; };
+		090A72C029000BCC003BDD7F /* HPCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090A72BF29000BCC003BDD7F /* HPCharacter.swift */; };
+		090A72C3290010D6003BDD7F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090A72C2290010D6003BDD7F /* NetworkManager.swift */; };
+		090A72CC290014CA003BDD7F /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090A72CB290014CA003BDD7F /* InfoViewController.swift */; };
+		090A72CE290014E0003BDD7F /* CharactersCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090A72CD290014E0003BDD7F /* CharactersCollectionViewController.swift */; };
+		090A72D929001BEF003BDD7F /* HARRYP__.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 090A72D829001BEF003BDD7F /* HARRYP__.TTF */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		090A72A729000B3A003BDD7F /* HarryPotterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HarryPotterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		090A72AA29000B3A003BDD7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		090A72AC29000B3A003BDD7F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		090A72AE29000B3A003BDD7F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		090A72B129000B3A003BDD7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		090A72B329000B44003BDD7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		090A72B629000B44003BDD7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		090A72B829000B44003BDD7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		090A72BF29000BCC003BDD7F /* HPCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HPCharacter.swift; sourceTree = "<group>"; };
+		090A72C2290010D6003BDD7F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		090A72CB290014CA003BDD7F /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		090A72CD290014E0003BDD7F /* CharactersCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCollectionViewController.swift; sourceTree = "<group>"; };
+		090A72D829001BEF003BDD7F /* HARRYP__.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = HARRYP__.TTF; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,67 @@
 		090A72A929000B3A003BDD7F /* HarryPotterApp */ = {
 			isa = PBXGroup;
 			children = (
-				090A72AA29000B3A003BDD7F /* AppDelegate.swift */,
-				090A72AC29000B3A003BDD7F /* SceneDelegate.swift */,
-				090A72AE29000B3A003BDD7F /* ViewController.swift */,
-				090A72B029000B3A003BDD7F /* Main.storyboard */,
-				090A72B329000B44003BDD7F /* Assets.xcassets */,
-				090A72B529000B44003BDD7F /* LaunchScreen.storyboard */,
-				090A72B829000B44003BDD7F /* Info.plist */,
+				090A72C629001406003BDD7F /* ViewControllers */,
+				090A72C1290010B6003BDD7F /* Services */,
+				090A72BE29000B95003BDD7F /* Models */,
+				090A72CF2900158F003BDD7F /* Storyboards */,
+				090A72D1290015D0003BDD7F /* Resurces */,
+				090A72D0290015B5003BDD7F /* App */,
 			);
 			path = HarryPotterApp;
+			sourceTree = "<group>";
+		};
+		090A72BE29000B95003BDD7F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				090A72BF29000BCC003BDD7F /* HPCharacter.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		090A72C1290010B6003BDD7F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				090A72C2290010D6003BDD7F /* NetworkManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		090A72C629001406003BDD7F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				090A72CD290014E0003BDD7F /* CharactersCollectionViewController.swift */,
+				090A72CB290014CA003BDD7F /* InfoViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		090A72CF2900158F003BDD7F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				090A72B029000B3A003BDD7F /* Main.storyboard */,
+				090A72B529000B44003BDD7F /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		090A72D0290015B5003BDD7F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				090A72AA29000B3A003BDD7F /* AppDelegate.swift */,
+				090A72AC29000B3A003BDD7F /* SceneDelegate.swift */,
+				090A72B829000B44003BDD7F /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		090A72D1290015D0003BDD7F /* Resurces */ = {
+			isa = PBXGroup;
+			children = (
+				090A72D829001BEF003BDD7F /* HARRYP__.TTF */,
+				090A72B329000B44003BDD7F /* Assets.xcassets */,
+			);
+			path = Resurces;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +185,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				090A72D929001BEF003BDD7F /* HARRYP__.TTF in Resources */,
 				090A72B729000B44003BDD7F /* LaunchScreen.storyboard in Resources */,
 				090A72B429000B44003BDD7F /* Assets.xcassets in Resources */,
 				090A72B229000B3A003BDD7F /* Main.storyboard in Resources */,
@@ -138,8 +199,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				090A72AF29000B3A003BDD7F /* ViewController.swift in Sources */,
+				090A72CE290014E0003BDD7F /* CharactersCollectionViewController.swift in Sources */,
+				090A72C3290010D6003BDD7F /* NetworkManager.swift in Sources */,
 				090A72AB29000B3A003BDD7F /* AppDelegate.swift in Sources */,
+				090A72C029000BCC003BDD7F /* HPCharacter.swift in Sources */,
+				090A72CC290014CA003BDD7F /* InfoViewController.swift in Sources */,
 				090A72AD29000B3A003BDD7F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,12 +353,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DY5944F6NS;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = HarryPotterApp/Info.plist;
+				INFOPLIST_FILE = HarryPotterApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +368,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,12 +381,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DY5944F6NS;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = HarryPotterApp/Info.plist;
+				INFOPLIST_FILE = HarryPotterApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -332,7 +396,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
