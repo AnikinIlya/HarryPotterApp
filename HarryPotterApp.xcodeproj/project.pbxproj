@@ -16,7 +16,7 @@
 		090A72C3290010D6003BDD7F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090A72C2290010D6003BDD7F /* NetworkManager.swift */; };
 		090A72CC290014CA003BDD7F /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090A72CB290014CA003BDD7F /* InfoViewController.swift */; };
 		090A72CE290014E0003BDD7F /* CharactersCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090A72CD290014E0003BDD7F /* CharactersCollectionViewController.swift */; };
-		090A72D929001BEF003BDD7F /* HARRYP__.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 090A72D829001BEF003BDD7F /* HARRYP__.TTF */; };
+		090A72D929001BEF003BDD7F /* harryp.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 090A72D829001BEF003BDD7F /* harryp.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +31,7 @@
 		090A72C2290010D6003BDD7F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		090A72CB290014CA003BDD7F /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		090A72CD290014E0003BDD7F /* CharactersCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCollectionViewController.swift; sourceTree = "<group>"; };
-		090A72D829001BEF003BDD7F /* HARRYP__.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = HARRYP__.TTF; sourceTree = "<group>"; };
+		090A72D829001BEF003BDD7F /* harryp.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = harryp.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +121,7 @@
 		090A72D1290015D0003BDD7F /* Resurces */ = {
 			isa = PBXGroup;
 			children = (
-				090A72D829001BEF003BDD7F /* HARRYP__.TTF */,
+				090A72D829001BEF003BDD7F /* harryp.ttf */,
 				090A72B329000B44003BDD7F /* Assets.xcassets */,
 			);
 			path = Resurces;
@@ -185,7 +185,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				090A72D929001BEF003BDD7F /* HARRYP__.TTF in Resources */,
+				090A72D929001BEF003BDD7F /* harryp.ttf in Resources */,
 				090A72B729000B44003BDD7F /* LaunchScreen.storyboard in Resources */,
 				090A72B429000B44003BDD7F /* Assets.xcassets in Resources */,
 				090A72B229000B3A003BDD7F /* Main.storyboard in Resources */,
