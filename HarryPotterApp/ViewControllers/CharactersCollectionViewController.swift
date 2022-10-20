@@ -18,9 +18,14 @@ class CharactersCollectionViewController: UICollectionViewController {
     }
     
     func fetchCaracters() {
-        NetworkManager.shared.fetch(dataType: [HPCharacter].self, url: List.url.rawValue) { hpCharacter in
-            self.characters = hpCharacter
-            self.collectionView.reloadData()
+        NetworkManager.shared.fetch(dataType: [HPCharacter].self, url: List.url.rawValue) { result in
+            switch result {
+            case .success(let characters):
+                self.characters = characters
+                self.collectionView.reloadData()
+            case .failure(let error):
+                print(error)
+            }
         }
     }
 }

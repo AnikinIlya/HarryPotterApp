@@ -11,42 +11,51 @@ enum List: String {
     case url = "https://hp-api.herokuapp.com/api/characters"
 }
 
+enum NetworkError: Error {
+    case invalidURL
+    case noData
+    case decodeingError
+}
+
 class NetworkManager {
     static let shared = NetworkManager()
     
-    func fetch<T: Decodable>(dataType: T.Type, url: String, completion: @escaping(T) -> Void) {
-        guard let url = URL(string: url) else { return }
+    func fetch<T: Decodable>(dataType: T.Type, url: String, completion: @escaping(Result<T, NetworkError>) -> Void) {
+        guard let url = URL(string: url) else {
+            completion(.failure(.invalidURL))
+            return
+        }
         
         URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data = data else {
+                print(error?.localizedDescription ?? "No error description")
+                completion(.failure(.noData))
                 return
             }
             do{
                 let type = try JSONDecoder().decode(T.self, from: data)
                 DispatchQueue.main.async {
-                    completion(type)
+                    completion(.success(type))
                 }
             } catch {
+                completion(.failure(.decodeingError))
                 print(error.localizedDescription)
             }
         }.resume()
     }
     
-    func fetchImage(from url: String, completion: @escaping(Data) -> Void) {
-        var imageUrl = ""
-        if url == "" {
-            imageUrl = "https://image.shutterstock.com/image-vector/no-image-available-vector-illustration-260nw-744886198.jpg"
-        } else {
-            imageUrl = url
-        }
-        guard let url = URL(string: imageUrl) else { return }
-        
-        DispatchQueue.global().async {
-            guard let imageData = try? Data(contentsOf: url) else { return }
-            DispatchQueue.main.async {
-                completion(imageData)
+    func fetchImage(from url: URL, completion: @escaping(Result<Data, NetworkError>) -> Void) {
+        URLSession.shared.dataTask(with: url) { data, _, error in
+            guard let data = data else {
+                completion(.failure(.noData))
+                print(error?.localizedDescription ?? "No error description")
+                return
             }
-        }
+            DispatchQueue.main.async {
+                completion(.success(data))
+            }
+
+        }.resume()
     }
     
     private init() {}

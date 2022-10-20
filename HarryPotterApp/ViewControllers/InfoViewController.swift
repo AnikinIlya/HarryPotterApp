@@ -9,6 +9,8 @@ import UIKit
 
 class InfoViewController: UIViewController {
 
+    var character: Character?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

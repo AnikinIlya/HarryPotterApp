@@ -18,6 +18,7 @@
 		090A72CE290014E0003BDD7F /* CharactersCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090A72CD290014E0003BDD7F /* CharactersCollectionViewController.swift */; };
 		090A72D929001BEF003BDD7F /* harryp.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 090A72D829001BEF003BDD7F /* harryp.ttf */; };
 		090A72E12900774D003BDD7F /* CharacterViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090A72E02900774D003BDD7F /* CharacterViewCell.swift */; };
+		092112DE29016F5100B5826B /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092112DD29016F5100B5826B /* ImageCacheManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		090A72CD290014E0003BDD7F /* CharactersCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCollectionViewController.swift; sourceTree = "<group>"; };
 		090A72D829001BEF003BDD7F /* harryp.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = harryp.ttf; sourceTree = "<group>"; };
 		090A72E02900774D003BDD7F /* CharacterViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewCell.swift; sourceTree = "<group>"; };
+		092112DD29016F5100B5826B /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				090A72C2290010D6003BDD7F /* NetworkManager.swift */,
+				092112DD29016F5100B5826B /* ImageCacheManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 				090A72E12900774D003BDD7F /* CharacterViewCell.swift in Sources */,
 				090A72C3290010D6003BDD7F /* NetworkManager.swift in Sources */,
 				090A72AB29000B3A003BDD7F /* AppDelegate.swift in Sources */,
+				092112DE29016F5100B5826B /* ImageCacheManager.swift in Sources */,
 				090A72C029000BCC003BDD7F /* HPCharacter.swift in Sources */,
 				090A72CC290014CA003BDD7F /* InfoViewController.swift in Sources */,
 				090A72AD29000B3A003BDD7F /* SceneDelegate.swift in Sources */,

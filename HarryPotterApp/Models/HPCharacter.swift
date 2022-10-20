@@ -7,11 +7,12 @@
 
 import Foundation
 
-enum House: Decodable {
-    case gryffindor
-    case ravenclaw
-    case hufflepuff
-    case slytherin
+enum House: String, Decodable {
+    case gryffindor = "Gryffindor"
+    case ravenclaw = "Ravenclaw"
+    case hufflepuff = "Hufflepuff"
+    case slytherin = "Slytherin"
+    case none = ""
 }
 
 struct HPCharacter: Decodable {
@@ -19,7 +20,7 @@ struct HPCharacter: Decodable {
     let alternate_names: [String]
     let species: String
     let gender: String
-    let house: String
+    let house: House
     let dateOfBirth: String
     let wizard: Bool
     let ancestry: String
