@@ -64,7 +64,7 @@
                                 <connections>
                                     <outlet property="characterImageView" destination="Clb-OA-baL" id="h5D-Mg-5vo"/>
                                     <outlet property="nameLabel" destination="HRm-PS-9ut" id="hfX-iN-qx6"/>
-                                    <segue destination="Lf2-Qe-DJf" kind="show" identifier="show" id="RvO-kj-Ie3"/>
+                                    <segue destination="Lf2-Qe-DJf" kind="show" id="k7A-NR-Amz"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -90,21 +90,67 @@
                     <view key="view" contentMode="scaleToFill" id="d24-wS-ca8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="top" axis="vertical" distribution="fillProportionally" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="hAi-wQ-LIH">
+                                <rect key="frame" x="16" y="104" width="382" height="742"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" distribution="fillEqually" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="b4Q-oA-rOp">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="700.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Ji-04-ru2">
+                                                <rect key="frame" x="0.0" y="0.0" width="183" height="698.5"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="cornerRadius" value="15"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="characterBioLabel" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="eGR-Fg-UKw">
+                                                <rect key="frame" x="199" y="0.0" width="183" height="25.5"/>
+                                                <fontDescription key="fontDescription" name="HarryP" family="Harry P" pointSize="25"/>
+                                                <color key="textColor" red="0.62745098039215685" green="0.68235294117647061" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" text="secondBioLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="dnk-vB-Fay">
+                                        <rect key="frame" x="0.0" y="716.5" width="103.5" height="25.5"/>
+                                        <fontDescription key="fontDescription" name="HarryP" family="Harry P" pointSize="25"/>
+                                        <color key="textColor" red="0.62745098040000002" green="0.68235294120000001" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="b4Q-oA-rOp" secondAttribute="trailing" id="7yn-a6-Rvv"/>
+                                    <constraint firstItem="b4Q-oA-rOp" firstAttribute="leading" secondItem="hAi-wQ-LIH" secondAttribute="leading" id="DzC-fl-7tU"/>
+                                    <constraint firstItem="b4Q-oA-rOp" firstAttribute="top" secondItem="hAi-wQ-LIH" secondAttribute="top" id="yZY-RP-UlX"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="b7F-S4-CRt"/>
-                        <color key="backgroundColor" red="0.16078431369999999" green="0.22352941179999999" blue="0.43137254899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.16078431369999999" green="0.26551329519710881" blue="0.54643814310873717" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hAi-wQ-LIH" firstAttribute="top" secondItem="b7F-S4-CRt" secondAttribute="top" constant="16" id="0cc-EU-EqU"/>
+                            <constraint firstItem="hAi-wQ-LIH" firstAttribute="leading" secondItem="b7F-S4-CRt" secondAttribute="leading" constant="16" id="5hy-Po-1NA"/>
+                            <constraint firstItem="b7F-S4-CRt" firstAttribute="bottom" secondItem="hAi-wQ-LIH" secondAttribute="bottom" constant="16" id="g5Y-OZ-bts"/>
+                            <constraint firstItem="b7F-S4-CRt" firstAttribute="trailing" secondItem="hAi-wQ-LIH" secondAttribute="trailing" constant="16" id="ybN-hy-XlW"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="DRK-Bw-695"/>
+                    <navigationItem key="navigationItem" id="w7R-Qw-oPC"/>
+                    <connections>
+                        <outlet property="characterBioLabel" destination="eGR-Fg-UKw" id="Hil-iF-SQZ"/>
+                        <outlet property="characterImage" destination="6Ji-04-ru2" id="dCF-k5-mBG"/>
+                        <outlet property="secondCharacterBioLabel" destination="dnk-vB-Fay" id="xwd-xk-dVJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M4o-WN-cgM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1552" y="49"/>
+            <point key="canvasLocation" x="1786.9565217391305" y="48.883928571428569"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="naP-aD-cAo">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="15s-vh-tGa" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackTranslucent" id="o3h-Cm-W3r">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="o3h-Cm-W3r">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">

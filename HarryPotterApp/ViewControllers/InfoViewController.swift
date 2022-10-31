@@ -9,23 +9,60 @@ import UIKit
 
 class InfoViewController: UIViewController {
 
-    var character: Character?
+    @IBOutlet var characterImage: UIImageView!
+    @IBOutlet var characterBioLabel: UILabel!
+    @IBOutlet var secondCharacterBioLabel: UILabel!
+    
+    var character: HPCharacter?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        updateView()
     }
     
+    private func updateView() {
+        self.title = character?.name
+        
+        characterBioLabel.text =
+"""
+Name: \(character?.name ?? "unknown")
+Species: \(character?.gender ?? "") \(character?.species ?? "unknown")
+Date of birth: \(character?.dateOfBirth ?? "unknown")
+House: \(character?.house.rawValue ?? "unknown") isStudentOrStuff
+Ancestry: \(character?.ancestry ?? "unknown")
+"""
 
-    /*
-    // MARK: - Navigation
+        secondCharacterBioLabel.text =
+"""
+isWizard
+Wand: 
+Patronus:
+isAlive
+Actor: \(character?.actor ?? "none")
+Alternate actors:
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+"""
+        
+        getImage()
     }
-    */
-
+    
+    private func getImage() {
+        let imageURL = URL(string: character?.image ?? "")!
+        
+        if imageURL.pathComponents.isEmpty {
+            self.characterImage.image = UIImage(named: "Hogwarts-Crest.png")
+            return
+        }
+        
+        NetworkManager.shared.fetchImage(from: imageURL) { result in
+            switch result {
+            case .success(let imageData):
+                guard let uiImage = UIImage(data: imageData) else { return }
+                self.characterImage.image = uiImage
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
 }

@@ -17,6 +17,13 @@ class CharactersCollectionViewController: UICollectionViewController {
         fetchCaracters()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let infoVC = segue.destination as? InfoViewController else { return }
+        guard let index = collectionView.indexPathsForSelectedItems?.first else { return }
+        
+        infoVC.character = characters[index.row]
+    }
+    
     func fetchCaracters() {
         NetworkManager.shared.fetch(dataType: [HPCharacter].self, url: List.url.rawValue) { result in
             switch result {

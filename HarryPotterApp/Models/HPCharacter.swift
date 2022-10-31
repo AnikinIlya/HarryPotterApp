@@ -24,8 +24,6 @@ struct HPCharacter: Decodable {
     let dateOfBirth: String
     let wizard: Bool
     let ancestry: String
-    let eyeColour: String
-    let hairColour: String
 //    let wand: Wand
     let patronus: String
     let hogwartsStudent: Bool
