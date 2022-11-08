@@ -35,7 +35,7 @@ struct HPCharacter: Decodable {
 }
 
 struct Wand: Decodable {
-    let wood: String?
-    let core: String?
+    let wood: String
+    let core: String
     let length: Float?
 }

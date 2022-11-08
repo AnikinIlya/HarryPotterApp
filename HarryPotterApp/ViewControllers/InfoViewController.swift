@@ -23,43 +23,42 @@ class InfoViewController: UIViewController {
     
     private func updateView() {
         guard let character = character else { return }
+        let wand = character.wand
+        let length = wand.length?.description
         self.title = character.name
         
         characterBioLabel.text =
-                                 """
-                                 Name:
-                                 \(character.name)
-                                 \(!character.alternate_names.isEmpty ? "\nAlso known as:\n" + character.alternate_names.joined(separator: ", ") + "\n" : "")
-                                 Species:
-                                 \(!character.gender.isEmpty ? character.gender : "") \(!character.species.isEmpty ? character.species : "unknown")
-                                 
-                                 \(character.wizard ? "Wizzard" : "None wizzard")
-                                 
-                                 Born:
-                                 \(!character.dateOfBirth.isEmpty ? character.dateOfBirth.replacingOccurrences(of: "-", with: ".") : "unknown")
-                                 
-                                 House:
-                                 \(!character.house.rawValue.isEmpty ? character.house.rawValue : "none")
-                                 
-                                 Blood status:
-                                 \(!character.ancestry.isEmpty ? character.ancestry : "unknown")
-                                 """
+"""
+Name:
+\(character.name)
+\(!character.alternate_names.isEmpty ? "\nAlso known as:\n" + character.alternate_names.joined(separator: ", ") + "\n" : "")
+Species:
+\(!character.gender.isEmpty ? character.gender : "") \(!character.species.isEmpty ? character.species : "unknown")
+
+\(character.wizard ? "Wizzard" : "None wizzard")
+
+Born:
+\(!character.dateOfBirth.isEmpty ? character.dateOfBirth.replacingOccurrences(of: "-", with: ".") : "unknown")
+
+House:
+\(!character.house.rawValue.isEmpty ? character.house.rawValue : "none")
+
+Blood status:
+\(!character.ancestry.isEmpty ? character.ancestry : "unknown")
+"""
 
         secondCharacterBioLabel.text =
-                                       """
-                                       
-                                       Wand:
-                                       
-                                       
-                                       Patronus:
-                                       \(!character.patronus.isEmpty ? character.patronus : "none")
-                                       
-                                       \(character.alive ? "Character is alive" : "Character is dead")
-                                       
-                                       Actor:
-                                       \(!character.actor.isEmpty ? character.actor : "none")
-                                       \(!character.alternate_actors.isEmpty ? "\nAlternate actors:\n" + character.alternate_actors.joined(separator: ", ") + "\n" : "")
-                                       """
+"""
+\(!wand.wood.isEmpty && !wand.core.isEmpty ? "Wand:\n" + " Wood - \(wand.wood)\n Core - \(wand.core)\n Length - \(length ?? "unknown")\n" : "")
+Patronus:
+\(!character.patronus.isEmpty ? character.patronus : "unknown")
+
+\(character.alive ? "Character is alive" : "Character is dead")
+
+Actor:
+\(!character.actor.isEmpty ? character.actor : "none")
+\(!character.alternate_actors.isEmpty ? "\nAlternate actors:\n" + character.alternate_actors.joined(separator: ", ") + "\n" : "")
+"""
         
         getImage()
     }
