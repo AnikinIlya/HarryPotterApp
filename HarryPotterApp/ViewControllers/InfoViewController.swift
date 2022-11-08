@@ -22,36 +22,51 @@ class InfoViewController: UIViewController {
     }
     
     private func updateView() {
-        self.title = character?.name
+        guard let character = character else { return }
+        self.title = character.name
         
         characterBioLabel.text =
-"""
-Name: \(character?.name ?? "unknown")
-Species: \(character?.gender ?? "") \(character?.species ?? "unknown")
-Date of birth: \(character?.dateOfBirth ?? "unknown")
-House: \(character?.house.rawValue ?? "unknown") isStudentOrStuff
-Ancestry: \(character?.ancestry ?? "unknown")
-"""
+                                 """
+                                 Name:
+                                 \(character.name)
+                                 \(!character.alternate_names.isEmpty ? "\nAlso known as:\n" + character.alternate_names.joined(separator: ", ") + "\n" : "")
+                                 Species:
+                                 \(!character.gender.isEmpty ? character.gender : "") \(!character.species.isEmpty ? character.species : "unknown")
+                                 
+                                 \(character.wizard ? "Wizzard" : "None wizzard")
+                                 
+                                 Born:
+                                 \(!character.dateOfBirth.isEmpty ? character.dateOfBirth.replacingOccurrences(of: "-", with: ".") : "unknown")
+                                 
+                                 House:
+                                 \(!character.house.rawValue.isEmpty ? character.house.rawValue : "none")
+                                 
+                                 Blood status:
+                                 \(!character.ancestry.isEmpty ? character.ancestry : "unknown")
+                                 """
 
         secondCharacterBioLabel.text =
-"""
-isWizard
-Wand: 
-Patronus:
-isAlive
-Actor: \(character?.actor ?? "none")
-Alternate actors:
-
-"""
+                                       """
+                                       
+                                       Wand:
+                                       
+                                       
+                                       Patronus:
+                                       \(!character.patronus.isEmpty ? character.patronus : "none")
+                                       
+                                       \(character.alive ? "Character is alive" : "Character is dead")
+                                       
+                                       Actor:
+                                       \(!character.actor.isEmpty ? character.actor : "none")
+                                       \(!character.alternate_actors.isEmpty ? "\nAlternate actors:\n" + character.alternate_actors.joined(separator: ", ") + "\n" : "")
+                                       """
         
         getImage()
     }
     
     private func getImage() {
-        let imageURL = URL(string: character?.image ?? "")!
-        
-        if imageURL.pathComponents.isEmpty {
-            self.characterImage.image = UIImage(named: "Hogwarts-Crest.png")
+        guard let imageURL = URL(string: character?.image ?? "") else {
+            characterImage.image = UIImage(named: "Hogwarts-Crest.png")
             return
         }
         
